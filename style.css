@@ -1,0 +1,451 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+body {
+   
+    
+    
+    
+   
+    background: linear-gradient(135deg, #87CEFA, #FF7F50);
+}
+.wave-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave {
+    position: absolute;
+    width: 150%;
+    height: 30vh;
+    background: linear-gradient(270deg, #ff6f61, #ffdb58, #00bcd4, #ff6f61);
+    background-size: 200% 200%;
+    opacity: 0.8; /* Increased opacity for more visibility */
+    border-radius: 50%;
+    animation: wave-motion 10s ease-in-out infinite, color-change 15s ease-in-out infinite;
+}
+
+/* Position each wave differently for a layered effect */
+.wave:nth-child(1) {
+    top: 20%;
+    left: -25%;
+    animation-delay: 0s;
+    transform: scale(1.2);
+}
+
+.wave:nth-child(2) {
+    top: 40%;
+    left: -15%;
+    opacity: 0.6;
+    animation-delay: 3s;
+    transform: scale(1.4);
+}
+
+.wave:nth-child(3) {
+    top: 60%;
+    left: -10%;
+    opacity: 0.4;
+    animation-delay: 6s;
+    transform: scale(1.6);
+}
+
+/* Keyframes for wave motion */
+@keyframes wave-motion {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+    50% {
+        transform: translateX(-25%) translateY(15px) scale(1.1);
+    }
+    100% {
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+/* Keyframes for color transitions */
+@keyframes color-change {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+  
+nav{
+    background-color: rgb(26, 29, 29);
+    color:#fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+.logo{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 28px;
+    color: rgb(255, 208, 18);
+}
+.nav-link{
+    list-style: none;
+    display: flex;
+}
+.nav-link li{
+    margin: 0 1rem;
+}
+.nav-link a{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-link a:hover{
+    color: #0af131;
+}
+#profile{
+    
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #0b0101;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+   
+   
+}
+.profile-content img{
+    width: 250px;
+    border-radius: 50%;
+}
+button{
+    background-color: #0ef20a;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.7rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover{
+    background-color: #00d0ff;
+    color: black;
+}
+#education{
+    padding: 50px;
+    
+}
+#education h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0a0303;
+}
+.education-card{
+   background-color: white;
+    border: 2px solid#ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.education-card h3{
+    font-size: 1.8rem;
+    color: #007bff;
+}
+.education-card p{
+    font-size: 1.1rem;
+    color:#555;
+    margin: 5px;
+}
+.education-card strong{
+    color:#000;
+}
+#contact{
+    
+    padding: 50px 0;
+    text-align: center;
+}
+#contact h2{
+    font-size: 36px;
+    color: #120303;
+    margin-bottom: 20px;
+}
+#contact p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color:#090303
+}
+.contact-card{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+.field{
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    box-shadow: 0 4px 12px rgba(12, 0, 0, 0.1);
+    border-radius: 10px;
+}
+input[type="submit"] {
+
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4e0ee4;
+    color: #fff;
+    border: none
+  }
+.group-form{
+    margin-bottom: 20px;
+    text-align: left;
+}
+.group-form label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color:#333
+}
+.group-form input,
+.group-form text area{
+width: 96%;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 16px;
+font-size: 16px;
+}
+.group-form textarea{
+    height:150px;
+    resize: none;
+    
+}
+
+#project h2{
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.group-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+.project-card{
+    position: relative;
+    height: 200px;
+    width: 300px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0   4px 8px rgba(0,0,0,0.3)  ;
+    
+    }
+    .project-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .project-description{
+        position: absolute;
+        top: 0%;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.5s ease;
+    }
+    .project-description h3{
+        margin: 0;
+        font-size: 1.5rem;
+        color: #ffdd77;
+    }
+    .project-description p{
+        margin: 10px 0;
+        padding: 0 20px;
+        font-size:1em ;
+    }
+    .project-card:hover
+    .project-description{
+        left: 0;
+        
+    }
+    .view-botton{
+        text-decoration: none;
+        color: #fff;
+        background-color: #ff704d;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease;
+    }
+    /* #blog{ 
+        padding: 50px 0;
+        background-color:#f4f4f9;
+        text-align: center;
+    }
+    #blog h2{
+        font-size: 2.5rem;
+        color:#333;
+        margin-bottom: 40px;
+    }
+    .scroller-container{
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        scroll-behavior: smooth;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #ff5733 transparent;
+        
+    }
+    .scroller-container::-webkit-scrollbar{
+        height: 8px;
+
+
+    }
+    .scroller-container::-webkit-scrollbar-thumb{
+        background-color: #ff5733;
+        border-radius:  10px;
+
+    }
+    .scroller-container::-webkit-scrollbar-track{
+        background-color: #f4f4f9;
+    }
+    .blog-card{
+        max-width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+
+    }
+    .blog-card img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+
+        
+    }
+    .blog-card h3{
+        font-size: 1em;
+        padding: 0 20px;
+        color: #666;
+    }
+    .blog-card p{
+        font-size: 1em;
+        padding: 0 20px;
+        color: #666;
+    }
+    .read-more{
+        text-decoration: none;
+        color: #fff;
+        background-color: #ff5733;
+        padding: 10px 20px;
+        margin: 20px;
+        border-radius: 5px;
+        display: inline-block;
+} */
+#blog-section {
+    padding: 50px 0;
+   
+    text-align: center;
+  }
+  
+  #blog-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #e20303 transparent;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: #1f0ceb;
+    border-radius: 10px;
+  }
+  
+  .scroll-container::-webkit-scrollbar-track {
+    background-color: #f4f4f9;
+  }
+  
+  .blog-card {
+    min-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-card h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  .blog-card p {
+    padding: 0 20px;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .read-more {
+    text-decoration: none;
+    color: #fff;
+    background-color: #0b2ded;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more:hover {
+    background-color: #15e412;
+  }
+  
