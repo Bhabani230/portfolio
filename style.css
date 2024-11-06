@@ -448,9 +448,9 @@ font-size: 16px;
   .read-more:hover {
     background-color: #15e412;
   }
-  footer {
+  .footer-content{
     background-color: #000; /* Black background */
     color: #fff; /* White text */
     padding: 20px 0;
     text-align: center;
-}
+  }
